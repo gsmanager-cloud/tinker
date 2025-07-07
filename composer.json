@@ -1,0 +1,52 @@
+{
+    "name": "gsmanager-cloud/tinker",
+    "description": "Powerful REPL for the GSManager framework.",
+    "keywords": ["tinker", "repl", "psysh", "gsmanager"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey Tyuhtin",
+            "email": "info@gsmanager.ru"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "gsmanager-cloud/console": "v1",
+        "gsmanager-cloud/contracts": "v1",
+        "gsmanager-cloud/support": "v1",
+        "psy/psysh": "^0.11.1|^0.12.0",
+        "symfony/var-dumper": "^4.3.4|^5.0|^6.0|^7.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "~1.3.3|^1.4.2",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^8.5.8|^9.3.3|^10.0"
+    },
+    "suggest": {
+        "gsmanager-cloud/database": "The GSManager Database package (v1)."
+    },
+    "autoload": {
+        "psr-4": {
+            "GSManager\\Tinker\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GSManager\\Tinker\\Tests\\": "tests/",
+            "App\\": "tests/fixtures/app",
+            "One\\Two\\": "tests/fixtures/vendor/one/two"
+        }
+    },
+    "extra": {
+        "gsmanager": {
+            "providers": [
+                "GSManager\\Tinker\\TinkerServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
